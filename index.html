@@ -633,17 +633,17 @@
         <div class="cat-rule"></div>
       </div>
       <div class="tiles">
-        <div class="tile" onclick="openModal('pulsed')">
+        <div class="tile" data-modal="pulsed">
           <div class="tile-name">Pulsed Jamming</div>
           <div class="tile-short">Cyclic on/off defeats AGC and conserves transmitter power</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('stochastic')">
+        <div class="tile" data-modal="stochastic">
           <div class="tile-name">Stochastic Pulsing</div>
           <div class="tile-short">Random intervals make filtering or prediction nearly impossible</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('burst')">
+        <div class="tile" data-modal="burst">
           <div class="tile-name">Burst-Synchronized Jamming</div>
           <div class="tile-short">Fires only on detected uplink bursts — minimal emissions signature</div>
           <div class="tile-arrow">→</div>
@@ -659,17 +659,17 @@
         <div class="cat-rule"></div>
       </div>
       <div class="tiles">
-        <div class="tile" onclick="openModal('deauth')">
+        <div class="tile" data-modal="deauth">
           <div class="tile-name">Deauth Injection</div>
           <div class="tile-short">802.11 deauth flood disconnects without wideband noise</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('ackstarve')">
+        <div class="tile" data-modal="ackstarve">
           <div class="tile-name">ACK Starvation</div>
           <div class="tile-short">Jam only ACK slots in TDMA/FHSS — forces retransmit loops</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('hoppred')">
+        <div class="tile" data-modal="hoppred">
           <div class="tile-name">Hop Prediction Jamming</div>
           <div class="tile-short">Predict next FHSS channel via clock analysis — jam one step ahead</div>
           <div class="tile-arrow">→</div>
@@ -685,17 +685,17 @@
         <div class="cat-rule"></div>
       </div>
       <div class="tiles">
-        <div class="tile" onclick="openModal('nullsteer')">
+        <div class="tile" data-modal="nullsteer">
           <div class="tile-name">Null-Steering Jamming</div>
           <div class="tile-short">Phased array beams on target while nulling toward friendlies</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('followme')">
+        <div class="tile" data-modal="followme">
           <div class="tile-name">Follow-Me Tracking</div>
           <div class="tile-short">Beam steered continuously to moving target via AoA / Doppler</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('linksel')">
+        <div class="tile" data-modal="linksel">
           <div class="tile-name">Link-Selective Jamming</div>
           <div class="tile-short">Jam uplink only — C2 denied while video downlink stays up for intel</div>
           <div class="tile-arrow">→</div>
@@ -711,12 +711,12 @@
         <div class="cat-rule"></div>
       </div>
       <div class="tiles">
-        <div class="tile" onclick="openModal('chirp')">
+        <div class="tile" data-modal="chirp">
           <div class="tile-name">Swept / Chirp Jamming</div>
           <div class="tile-short">Continuous freq sweep covers all FHSS hops over time</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('spotbarrage')">
+        <div class="tile" data-modal="spotbarrage">
           <div class="tile-name">Spot + Barrage Combination</div>
           <div class="tile-short">High-power spot on control link, wideband on GPS simultaneously</div>
           <div class="tile-arrow">→</div>
@@ -732,17 +732,17 @@
         <div class="cat-rule"></div>
       </div>
       <div class="tiles">
-        <div class="tile" onclick="openModal('rth')">
+        <div class="tile" data-modal="rth">
           <div class="tile-name">RTH Induction</div>
           <div class="tile-short">Jam control link only — drone autonomously returns to home point</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('hoverlock')">
+        <div class="tile" data-modal="hoverlock">
           <div class="tile-name">Hover-Lock</div>
           <div class="tile-short">Jam control link on hover-hold platforms — drone freezes for ID</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('geofence')">
+        <div class="tile" data-modal="geofence">
           <div class="tile-name">Geofence Spoofing</div>
           <div class="tile-short">GPS spoof moves drone's perceived location into a no-fly zone</div>
           <div class="tile-arrow">→</div>
@@ -758,12 +758,12 @@
         <div class="cat-rule"></div>
       </div>
       <div class="tiles">
-        <div class="tile" onclick="openModal('noisefloor')">
+        <div class="tile" data-modal="noisefloor">
           <div class="tile-name">Noise-Floor Creep</div>
           <div class="tile-short">Raise noise floor just below detection threshold — link degrades silently</div>
           <div class="tile-arrow">→</div>
         </div>
-        <div class="tile" onclick="openModal('fracbw')">
+        <div class="tile" data-modal="fracbw">
           <div class="tile-name">Fractional Bandwidth Jamming</div>
           <div class="tile-short">Target only pilot/sync subcarriers in OFDM — receiver loses sync quietly</div>
           <div class="tile-arrow">→</div>
@@ -786,32 +786,32 @@
       <div class="cm-body">
         <div class="cm-intro">Understanding the attack surface is the foundation of resilient platform design. Each technique above has a corresponding hardening response — and understanding both sides is what makes effective C-UAS doctrine possible.</div>
         <div class="cm-tiles">
-          <div class="cm-tile" onclick="openModal('cm_freqagility')">
+          <div class="cm-tile" data-modal="cm_freqagility">
             <div class="cm-tile-name">Frequency Agility</div>
             <div class="cm-tile-short">Adaptive FHSS with cryptographically unpredictable hop sequences</div>
             <div class="cm-arrow">→ expand</div>
           </div>
-          <div class="cm-tile" onclick="openModal('cm_redundantgnss')">
+          <div class="cm-tile" data-modal="cm_redundantgnss">
             <div class="cm-tile-name">Redundant GNSS + IMU</div>
             <div class="cm-tile-short">Multi-constellation + inertial fallback defeats spoof and jam</div>
             <div class="cm-arrow">→ expand</div>
           </div>
-          <div class="cm-tile" onclick="openModal('cm_encryption')">
+          <div class="cm-tile" data-modal="cm_encryption">
             <div class="cm-tile-name">Link Authentication</div>
             <div class="cm-tile-short">Cryptographic per-frame auth defeats injection and replay attacks</div>
             <div class="cm-arrow">→ expand</div>
           </div>
-          <div class="cm-tile" onclick="openModal('cm_fiberoptic')">
+          <div class="cm-tile" data-modal="cm_fiberoptic">
             <div class="cm-tile-name">Fiber-Optic Tether</div>
             <div class="cm-tile-short">Eliminates RF attack surface entirely for tethered platforms</div>
             <div class="cm-arrow">→ expand</div>
           </div>
-          <div class="cm-tile" onclick="openModal('cm_spreadspectrum')">
+          <div class="cm-tile" data-modal="cm_spreadspectrum">
             <div class="cm-tile-name">Spread-Spectrum Processing Gain</div>
             <div class="cm-tile-short">DSSS / CSS provides inherent narrowband jam resistance</div>
             <div class="cm-arrow">→ expand</div>
           </div>
-          <div class="cm-tile" onclick="openModal('cm_autonomy')">
+          <div class="cm-tile" data-modal="cm_autonomy">
             <div class="cm-tile-name">Graceful Autonomy Degradation</div>
             <div class="cm-tile-short">Mission continuation under comms loss via onboard decision logic</div>
             <div class="cm-arrow">→ expand</div>
@@ -838,12 +838,12 @@
 </div><!-- /page -->
 
 <!-- MODAL -->
-<div class="modal-backdrop" id="backdrop" onclick="closeOnBackdrop(event)">
+<div class="modal-backdrop" id="backdrop" >
   <div class="modal-box">
     <div class="modal-top">
       <div class="modal-cat-label" id="m-cat"></div>
       <div class="modal-title" id="m-title"></div>
-      <button class="modal-close" onclick="closeModal()">×</button>
+      <button class="modal-close" >×</button>
     </div>
     <div class="modal-content">
       <div class="modal-body" id="m-body"></div>
@@ -856,6 +856,27 @@
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.querySelectorAll('[data-modal]').forEach(function(el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', function() {
+      openModal(el.getAttribute('data-modal'));
+    });
+  });
+
+  document.getElementById('backdrop').addEventListener('click', function(e) {
+    if (e.target === document.getElementById('backdrop')) closeModal();
+  });
+
+  document.querySelector('.modal-close').addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+});
+
 const D = {
   pulsed:{cat:'Temporal / Duty-Cycle',title:'Pulsed Jamming',body:`<p>The simplest and most power-efficient temporal technique. The jammer switches on and off at a regular duty cycle — typically 10–50% on-time — rather than transmitting continuously.</p><p>The key insight is that drone receivers rely on <strong>Automatic Gain Control (AGC)</strong> to adapt to interference. AGC circuits take time — typically tens of milliseconds — to respond and compress a strong incoming signal. A pulsed jammer that turns off before AGC has fully settled, then back on, keeps the receiver perpetually in a transient recovery state where effective jamming occurs even at lower average power.</p><p>Secondary benefit: duty-cycle reduction proportionally extends transmitter lifespan and thermal headroom. A jammer running at 25% duty cycle can often sustain 4× the peak power it could manage continuously.</p>`,effect:'Sustained link degradation at reduced average power. Particularly effective against DJI OcuSync and similar proprietary 2.4/5.8 GHz systems with slow AGC response times.'},
   stochastic:{cat:'Temporal / Duty-Cycle',title:'Stochastic Pulsing',body:`<p>A refinement of basic pulsed jamming: instead of fixed-interval on/off cycles, the timing of pulses is randomized using a pseudorandom sequence or true entropy source.</p><p>This matters because sophisticated receivers can be designed to <strong>synchronize their transmission bursts to the known gaps</strong> in a fixed-pattern jammer — learning the jammer's rhythm and exploiting the off-intervals for critical frames.</p><p>Random pulse timing eliminates this adaptation window. The receiver has no basis for predicting when interference will be present, making selective retransmission unreliable.</p>`,effect:'Defeats protocol-level jammer adaptation. Higher average interference effectiveness per watt than fixed pulsing against intelligent or adaptive link layers.'},
@@ -894,10 +915,7 @@ function closeModal(){
   document.getElementById('backdrop').classList.remove('open');
   document.body.style.overflow='';
 }
-function closeOnBackdrop(e){
-  if(e.target===document.getElementById('backdrop'))closeModal();
-}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
 </script>
 </body>
 </html>
