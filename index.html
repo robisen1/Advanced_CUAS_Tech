@@ -492,12 +492,14 @@
   /* ══ MODAL ══ */
   .modal-backdrop {
     display:none;
-    position:fixed; inset:0; z-index:200;
-    background:rgba(14,31,56,0.55);
+    position:fixed; top:0; left:0; right:0; bottom:0; z-index:9999;
+    background:rgba(14,31,56,0.6);
     backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);
     align-items:center;
     justify-content:center;
     padding:24px;
+    overflow-y:auto;
   }
   .modal-backdrop.open { display:flex; }
 
@@ -909,11 +911,11 @@ function openModal(k){
   document.getElementById('m-body').innerHTML=d.body;
   document.getElementById('m-effect').textContent=d.effect;
   document.getElementById('backdrop').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow="hidden"; document.documentElement.style.overflow="hidden";
 }
 function closeModal(){
   document.getElementById('backdrop').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow=""; document.documentElement.style.overflow="";
 }
 </script>
 </script>
